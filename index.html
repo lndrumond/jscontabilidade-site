@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Contabilidade | Santana do Paraíso, MG</title>
+
+    <!-- Preconnect acelera o download das fontes; o CDN do Google Fonts foi aprovado no plano -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Atalho para quem navega por teclado pular a navbar (WCAG 2.4.1) -->
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+    <header class="site-header" data-header>
+      <div class="container site-header__inner">
+        <a class="brand" href="#inicio">
+          <img class="brand__icon" src="assets/logo-coracao.svg" alt="" width="32" height="32">
+          <span class="brand__name"><span class="brand__accent">JS</span> Contabilidade</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu" data-nav-toggle>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Principal" data-nav>
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="#servicos">Serviços</a></li>
+            <li><a class="site-nav__link" href="#sobre">Sobre</a></li>
+            <li><a class="site-nav__link" href="#depoimentos">Depoimentos</a></li>
+            <li><a class="site-nav__link" href="#faq">Dúvidas</a></li>
+            <li><a class="site-nav__link" href="#contato">Contato</a></li>
+          </ul>
+          <a class="btn btn--primary site-nav__cta" href="#orcamento">Consultoria gratuita</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Seção 1: Hero -->
+      <section id="inicio" class="section section--dark hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Abertura de empresa e MEI no Vale do Aço</p>
+            <h1 id="hero-title" class="hero__title">
+              A Contabilidade mais completa e <span class="text-accent">bem pertinho de você!</span>
+            </h1>
+            <p class="hero__subtitle">
+              Somos especialistas em Abertura de empresas, Assessoria Contábil, Certificado Digital e Planejamento Tributário.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="#orcamento">Agende uma consultoria gratuita</a>
+              <a class="btn btn--ghost btn--lg" href="https://wa.me/5531988457407" target="_blank" rel="noopener" data-whatsapp>
+                Falar no WhatsApp<span class="visually-hidden"> (abre em nova aba)</span>
+              </a>
+            </div>
+            <p class="hero__note">Atendimento de segunda a sexta, das 8h às 18h.</p>
+          </div>
+
+          <!-- Coração do logotipo como peça visual; decorativo, por isso escondido de leitores de tela -->
+          <div class="hero__visual" aria-hidden="true">
+            <img class="hero__heart" src="assets/logo-coracao.svg" alt="" width="440" height="440">
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 5 (primeira posição): formulário logo após o hero, alvo dos botões "Consultoria gratuita" -->
+      <section id="orcamento" class="section section--beige" aria-labelledby="orcamento-title">
+        <div class="container quote-section">
+          <div class="quote-section__intro">
+            <p class="section-eyebrow">Consultoria inicial gratuita</p>
+            <h2 id="orcamento-title" class="section-title">Peça seu orçamento</h2>
+            <p class="quote-section__text">
+              Analisamos o cenário atual da sua empresa e indicamos o melhor caminho. Preencha os dados ao lado e retornamos em horário comercial, de segunda a sexta, das 8h às 18h.
+            </p>
+          </div>
+
+          <div class="quote-section__form" data-form-mount>
+            <noscript>
+              <p>Para enviar o formulário, ative o JavaScript. Se preferir, fale com a gente pelo <a href="https://wa.me/5531988457407">WhatsApp</a>.</p>
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 2: Serviços. Ícones são decorativos: o nome do serviço já está no título do card -->
+      <section id="servicos" class="section section--light" aria-labelledby="servicos-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-eyebrow">O que fazemos</p>
+            <h2 id="servicos-title" class="section-title">Serviços completos para sua empresa</h2>
+          </header>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M4 21h16M6 21V8l6-4 6 4v13M10 21v-5h4v5M9 11h.01M15 11h.01"/></svg>
+              </span>
+              <h3 class="service-card__title">Abertura e baixa de empresas</h3>
+              <p class="service-card__text">CNPJ e MEI: abrimos, alteramos e encerramos sua empresa com toda a documentação.</p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M6 3h12v18H6zM9 7h6M9 11h.01M12 11h.01M15 11h.01M9 15h.01M12 15h.01M15 15h.01"/></svg>
+              </span>
+              <h3 class="service-card__title">Assessoria contábil, fiscal e DP</h3>
+              <p class="service-card__text">Escrituração, obrigações fiscais e departamento pessoal, com rotina organizada e prazos em dia.</p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__icon" aria-hidden="true">
+                <img src="assets/certificado-digital-icone.svg" alt="" width="36" height="36">
+              </span>
+              <h3 class="service-card__title">Certificado digital</h3>
+              <p class="service-card__text">Emissão e renovação para documentos eletrônicos e transações online.</p>
+            </article>
+
+            <article class="service-card">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M4 20V4M4 20h16M8 16l4-5 3 3 5-6"/></svg>
+              </span>
+              <h3 class="service-card__title">Planejamento tributário</h3>
+              <p class="service-card__text">Analisamos o cenário atual da sua empresa para indicar o regime tributário mais adequado.</p>
+            </article>
+          </div>
+
+          <div class="services-cta">
+            <p>Quer saber qual é o melhor caminho para o seu caso?</p>
+            <a class="btn btn--primary" href="#orcamento">Consultoria inicial gratuita</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 3: Sobre -->
+      <section id="sobre" class="section section--dark" aria-labelledby="sobre-title">
+        <div class="container about">
+          <!-- Espaço reservado: a foto real chega depois, sem mudar o layout (PRD seção 10) -->
+          <figure class="about__media">
+            <div class="about__photo" aria-hidden="true">
+              <span>Foto em breve</span>
+            </div>
+          </figure>
+
+          <div class="about__content">
+            <p class="section-eyebrow">Quem cuida da sua contabilidade</p>
+            <h2 id="sobre-title" class="section-title">Sherryne Vasconcelos, contadora</h2>
+            <p class="about__text">
+              À frente da JS Contabilidade, em Santana do Paraíso, atendemos empresários, MEIs, profissionais PJ e pessoas físicas com um atendimento próximo, direto e transparente.
+            </p>
+            <blockquote class="about__quote">
+              “Deixe sua contabilidade para quem entende do assunto!”
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 4: Depoimentos -->
+      <section id="depoimentos" class="section section--light" aria-labelledby="depoimentos-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-eyebrow">Avaliações no Google</p>
+            <h2 id="depoimentos-title" class="section-title">Quem já é cliente recomenda</h2>
+          </header>
+
+          <!-- Resumo da nota: fica em card escuro porque as estrelas âmbar só têm contraste suficiente sobre fundo escuro -->
+          <div class="rating-card">
+            <div class="rating-card__source">
+              <span class="rating-card__logo">
+                <img src="assets/google-logo.webp" alt="Google" width="28" height="28">
+              </span>
+              <span class="rating-card__source-text">Avaliações de clientes</span>
+            </div>
+
+            <dl class="rating-card__stats">
+              <div class="rating-stat">
+                <dt class="rating-stat__label">Nota média</dt>
+                <dd class="rating-stat__value">
+                  <span data-count="5" data-decimals="1">5,0</span>
+                  <svg class="rating-stat__star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg>
+                </dd>
+              </div>
+              <div class="rating-stat">
+                <dt class="rating-stat__label">Avaliações</dt>
+                <dd class="rating-stat__value"><span data-count="59">59</span></dd>
+              </div>
+            </dl>
+
+            <a class="btn btn--primary rating-card__link" href="https://g.co/kgs/9UPxF99" target="_blank" rel="noopener">
+              Ver no Google<span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </div>
+
+          <div class="reviews-grid">
+            <figure class="review-card">
+              <div class="review-card__top">
+                <span class="review-card__stars" aria-hidden="true">★★★★★</span>
+                <span class="visually-hidden">Avaliação de 5 estrelas</span>
+                <img class="review-card__source" src="assets/google-logo.webp" alt="Avaliação no Google" width="20" height="20">
+              </div>
+              <blockquote class="review-card__quote">
+                <p>Responsável, competente, inteligente faltam adjetivos para descrever Sherryne.</p>
+              </blockquote>
+              <figcaption class="review-card__author">Cassia G.</figcaption>
+            </figure>
+
+            <figure class="review-card">
+              <div class="review-card__top">
+                <span class="review-card__stars" aria-hidden="true">★★★★★</span>
+                <span class="visually-hidden">Avaliação de 5 estrelas</span>
+                <img class="review-card__source" src="assets/google-logo.webp" alt="Avaliação no Google" width="20" height="20">
+              </div>
+              <blockquote class="review-card__quote">
+                <p>Trabalho de excelência!</p>
+              </blockquote>
+              <figcaption class="review-card__author">Dapheny M.</figcaption>
+            </figure>
+
+            <figure class="review-card">
+              <div class="review-card__top">
+                <span class="review-card__stars" aria-hidden="true">★★★★★</span>
+                <span class="visually-hidden">Avaliação de 5 estrelas</span>
+                <img class="review-card__source" src="assets/google-logo.webp" alt="Avaliação no Google" width="20" height="20">
+              </div>
+              <blockquote class="review-card__quote">
+                <p>Simplesmente os melhores!</p>
+              </blockquote>
+              <figcaption class="review-card__author">Victor C.</figcaption>
+            </figure>
+
+            <!-- Esta avaliação veio sem autor identificado nas fontes; não inventamos nome -->
+            <figure class="review-card">
+              <div class="review-card__top">
+                <span class="review-card__stars" aria-hidden="true">★★★★★</span>
+                <span class="visually-hidden">Avaliação de 5 estrelas</span>
+                <img class="review-card__source" src="assets/google-logo.webp" alt="Avaliação no Google" width="20" height="20">
+              </div>
+              <blockquote class="review-card__quote">
+                <p>Melhor atendimento, o melhor serviço prestado, é o tipo de empresa que faz o serviço e a gente não se preocupa com nada, confiança total neles.</p>
+              </blockquote>
+              <figcaption class="review-card__author">Cliente no Google</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 6: FAQ -->
+      <!-- Seção 6: FAQ. details/summary já dá teclado, foco e leitura de estado sem script -->
+      <section id="faq" class="section section--light" aria-labelledby="faq-title">
+        <div class="container faq">
+          <header class="section-header">
+            <p class="section-eyebrow">Perguntas frequentes</p>
+            <h2 id="faq-title" class="section-title">Tire suas dúvidas antes de começar</h2>
+          </header>
+
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__question">Quanto tempo leva para abrir minha empresa?</summary>
+              <p class="faq__answer">O prazo depende do tipo de empresa e da análise dos órgãos competentes. Na consultoria inicial, explicamos o tempo estimado para o seu caso.</p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">Sou MEI. Preciso mesmo de contador?</summary>
+              <p class="faq__answer">Contratar contador não é obrigatório para o MEI, mas a declaração anual (DASN-SIMEI) e as obrigações do dia a dia precisam ser feitas no prazo. Podemos cuidar disso para você.</p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">Quais cidades vocês atendem?</summary>
+              <p class="faq__answer">Atendemos Ipatinga, Coronel Fabriciano, Timóteo e todo o Vale do Aço, com escritório em Santana do Paraíso.</p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">O que é a consultoria inicial gratuita?</summary>
+              <p class="faq__answer">É uma análise do cenário atual da sua empresa ou do seu caso, com os caminhos possíveis explicados, sem compromisso.</p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">Vocês fazem a declaração do Imposto de Renda?</summary>
+              <p class="faq__answer">Sim. Organizamos seus documentos e informamos o que precisa ser declarado. Os prazos seguem o calendário da Receita Federal, que muda a cada ano.</p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">Para que serve o certificado digital?</summary>
+              <p class="faq__answer">Ele garante sua identidade em documentos eletrônicos e transações online, como notas fiscais e sistemas do governo. Fazemos a emissão e a renovação.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 7: Contato -->
+      <section id="contato" class="section section--dark" aria-labelledby="contato-title">
+        <div class="container">
+          <h2 id="contato-title">Contato</h2>
+          <p class="contact-intro">Prefere escrever? Preencha o formulário e retornamos em horário comercial.</p>
+
+          <!-- Seção 7: Contato -->
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-item__label">WhatsApp</span>
+              <a class="contact-item__value" href="https://wa.me/5531988457407" target="_blank" rel="noopener" data-whatsapp>(31) 98845-7407<span class="visually-hidden"> (abre em nova aba)</span></a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-item__label">E-mail</span>
+              <a class="contact-item__value" href="mailto:cont.sherryne@gmail.com">cont.sherryne@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-item__label">Horário</span>
+              <span class="contact-item__value">Segunda a sexta, das 8h às 18h</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-item__label">Endereço</span>
+              <a class="contact-item__value" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Jos%C3%A9+de+Alencar%2C+72+-+Cidade+Nova%2C+Santana+do+Para%C3%ADso+-+MG%2C+35179-000" target="_blank" rel="noopener">R. José de Alencar, 72 - Cidade Nova, Santana do Paraíso - MG, 35179-000<span class="visually-hidden"> (abre o mapa em nova aba)</span></a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-item__label">Atendimento</span>
+              <span class="contact-item__value">Ipatinga, Coronel Fabriciano, Timóteo e todo o Vale do Aço</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-item__label">Redes</span>
+              <span class="contact-item__value contact-item__social">
+                <a href="https://www.instagram.com/jscontabilidade.santanaparaiso/" target="_blank" rel="noopener">Instagram<span class="visually-hidden"> (abre em nova aba)</span></a>
+                <a href="https://www.facebook.com/people/Js-Contabilidade/61564326296358" target="_blank" rel="noopener">Facebook<span class="visually-hidden"> (abre em nova aba)</span></a>
+              </span>
+            </li>
+          </ul>
+
+          <!-- Seção 5 (segunda posição): mesmo formulário, no fim da página -->
+          <div class="contact-form" data-form-mount>
+            <noscript>
+              <p>Para enviar o formulário, ative o JavaScript. Se preferir, fale com a gente pelo <a href="https://wa.me/5531988457407">WhatsApp</a>.</p>
+            </noscript>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- O href é sobrescrito pelo script a partir da configuração; fica aqui para funcionar mesmo sem JS -->
+    <a class="whatsapp-float" href="https://wa.me/5531988457407" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp (abre em nova aba)" data-whatsapp>
+      <svg class="whatsapp-float__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9.2 8.6c.3-.6 1-.6 1.3 0l.6 1.3c.1.3 0 .6-.2.8l-.5.5a5 5 0 0 0 2.4 2.4l.5-.5c.2-.2.5-.3.8-.2l1.3.6c.6.3.6 1 0 1.3l-.8.5c-.6.4-1.4.4-2 .1a8 8 0 0 1-3.9-3.9c-.3-.6-.3-1.4.1-2z" fill="currentColor"/>
+      </svg>
+      <span class="whatsapp-float__label" aria-hidden="true">WhatsApp</span>
+    </a>
+
+    <!-- Formulário definido uma vez e clonado pelo script nas duas posições; evita manter HTML duplicado e ids repetidos -->
+    <template id="quote-form-template">
+      <form class="quote-form" novalidate>
+        <div class="field">
+          <label class="field__label" for="qf-name">Nome</label>
+          <input class="field__control" id="qf-name" name="name" type="text" autocomplete="name" required aria-describedby="qf-name-error">
+          <p class="field__error" id="qf-name-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="qf-phone">WhatsApp</label>
+          <input class="field__control" id="qf-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(31) 98845-7407" required aria-describedby="qf-phone-error">
+          <p class="field__error" id="qf-phone-error" hidden></p>
+        </div>
+
+        <div class="field field--full">
+          <label class="field__label" for="qf-email">E-mail</label>
+          <input class="field__control" id="qf-email" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required aria-describedby="qf-email-error">
+          <p class="field__error" id="qf-email-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="qf-client-type">Tipo de cliente</label>
+          <select class="field__control field__control--select" id="qf-client-type" name="clientType" required aria-describedby="qf-client-type-error">
+            <option value="" selected disabled>Selecione</option>
+            <option value="cnpj">Empresa (CNPJ)</option>
+            <option value="mei">MEI</option>
+            <option value="pj">Profissional PJ</option>
+            <option value="pf">Pessoa física</option>
+          </select>
+          <p class="field__error" id="qf-client-type-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="qf-service">Serviço de interesse</label>
+          <select class="field__control field__control--select" id="qf-service" name="service" required aria-describedby="qf-service-error">
+            <option value="" selected disabled>Selecione</option>
+            <option value="abertura">Abertura de empresa</option>
+            <option value="assessoria">Assessoria contábil</option>
+            <option value="certificado">Certificado digital</option>
+            <option value="planejamento">Planejamento tributário</option>
+            <option value="ir">Imposto de renda</option>
+            <option value="outro">Outro</option>
+          </select>
+          <p class="field__error" id="qf-service-error" hidden></p>
+        </div>
+
+        <div class="field field--full field--check">
+          <div class="field__check-row">
+            <input class="field__checkbox" id="qf-consent" name="consent" type="checkbox" required aria-describedby="qf-consent-error">
+            <label class="field__check-label" for="qf-consent">
+              Concordo em compartilhar meus dados para receber contato sobre meu orçamento, conforme a
+              <!-- Placeholder: o texto da política de privacidade ainda não foi fornecido (PRD, pendências) -->
+              <a href="#" data-privacy-link>Política de Privacidade</a>.
+            </label>
+          </div>
+          <p class="field__error" id="qf-consent-error" hidden></p>
+        </div>
+
+        <div class="field--full">
+          <!-- O botão só trava sem o consentimento; a dica explica o motivo para quem vê um botão desabilitado -->
+          <p class="quote-form__hint" data-consent-hint>Marque o consentimento acima para liberar o envio.</p>
+          <button class="btn btn--primary btn--lg quote-form__submit" type="submit">Solicitar orçamento</button>
+          <!-- Região anunciada por leitores de tela: recebe sucesso ou erro de envio na fase 6 -->
+          <div class="quote-form__status" role="status" aria-live="polite" data-form-status></div>
+        </div>
+      </form>
+    </template>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__brand">
+          <img src="assets/logo-coracao.svg" alt="" width="24" height="24">
+          <span><span class="brand__accent">JS</span> Contabilidade</span>
+        </p>
+        <!-- O ano é preenchido pelo script, para não ficar desatualizado (o site atual ainda diz 2024) -->
+        <p class="site-footer__text">© <span data-year>2026</span> JS Contabilidade · Santana do Paraíso, MG</p>
+      </div>
+    </footer>
+  </body>
+</html>

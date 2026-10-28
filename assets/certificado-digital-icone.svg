@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="certSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" fill="none">
+            <defs>
+              <!-- Gradiente Dinâmico do Selo -->
+              <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffb940"></stop>
+                <stop offset="100%" stop-color="#cc860d"></stop>
+              </linearGradient>
+
+              <!-- Gradiente de Preenchimento Suave do Documento -->
+              <linearGradient id="docBgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"></stop>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"></stop>
+              </linearGradient>
+
+              <!-- Sombra Suave -->
+              <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+                <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25"></feDropShadow>
+              </filter>
+            </defs>
+
+            <!-- Grupo Principal com Atributos Customizáveis -->
+            <g id="certMainGroup" stroke-linecap="round" stroke-linejoin="round">
+              
+              <!-- 1. CORPO DO CERTIFICADO / DOCUMENTO -->
+              <g id="documentBody">
+                <!-- Sombra / Fundo do Documento -->
+                <rect id="docBase" x="180" y="120" width="440" height="560" rx="28" fill="url(#docBgGrad)" stroke="#ffb940" stroke-width="12" filter="url(#softShadow)"></rect>
+
+                <!-- Canto Dobrado / Marcador Digital Moderno (Canto Superior Direito) -->
+                <path id="docCorner" d="M 520 120 L 620 220 L 548 220 C 532.54 220 520 207.46 520 192 Z" fill="#ffb940" fill-opacity="0.15" stroke="#ffb940" stroke-width="12"></path>
+
+                <!-- Linha Decorativa do Canto -->
+                <line x1="520" y1="120" x2="620" y2="220" stroke="#ffb940" stroke-width="12"></line>
+              </g>
+
+              <!-- 2. PADRÃO DE CIRCUITO DIGITAL / CHIP (Segurança Digital) -->
+              <g id="circuitLines" stroke="#ffb940" stroke-width="8" stroke-opacity="0.4" fill="none">
+                <!-- Circuito Esquerdo Topo -->
+                <path d="M 230 200 L 290 200 L 320 230"></path>
+                <circle cx="230" cy="200" r="6" fill="#ffb940"></circle>
+                
+                <!-- Circuito Esquerdo Meio -->
+                <path d="M 230 380 L 270 380 L 290 360"></path>
+                <circle cx="230" cy="380" r="6" fill="#ffb940"></circle>
+
+                <!-- Circuito Direita -->
+                <path d="M 570 320 L 530 320 L 500 290"></path>
+                <circle cx="570" cy="320" r="6" fill="#ffb940"></circle>
+              </g>
+
+              <!-- 3. LINHAS DE TEXTO SIMULADO DO CERTIFICADO -->
+              <g id="docTextLines" stroke="#ffb940" stroke-width="10" stroke-linecap="round" opacity="0.8">
+                <!-- Cabeçalho do Texto -->
+                <line x1="250" y1="200" x2="420" y2="200" stroke-width="14"></line>
+                <line x1="250" y1="240" x2="360" y2="240" stroke-width="10" opacity="0.6"></line>
+
+                <!-- Linhas do Corpo -->
+                <line x1="250" y1="300" x2="440" y2="300"></line>
+                <line x1="250" y1="340" x2="550" y2="340"></line>
+                <line x1="250" y1="380" x2="480" y2="380"></line>
+                <line x1="250" y1="420" x2="380" y2="420" opacity="0.5"></line>
+              </g>
+
+              <!-- 4. SELO / MEDALHA DE AUTENTICIDADE E VERIFICAÇÃO -->
+              <g id="securityBadge" transform="translate(470, 480)">
+                <!-- Fitilhos / Fitas do Selo -->
+                <path id="ribbons" d="M -20 40 L -45 130 L 0 105 L 45 130 L 20 40" fill="#ffb940" fill-opacity="0.2" stroke="#ffb940" stroke-width="10"></path>
+
+                <!-- Estrela / Insígnia Dentada Exterior -->
+                <path id="badgeStar" d="M 0 -70 L 17 -58 L 38 -62 L 46 -42 L 65 -34 L 62 -13 L 73 5 L 60 21 L 62 43 L 41 48 L 32 68 L 11 63 L -6 73 L -21 60 L -42 61 L -47 40 L -67 30 L -62 9 L -72 -10 L -58 -24 L -58 -46 L -37 -48 L -27 -67 Z" fill="url(#accentGrad)" stroke="#ffb940" stroke-width="8"></path>
+
+                <!-- Círculo Interno do Selo -->
+                <circle id="badgeInnerCircle" cx="0" cy="0" r="42" fill="#0f172a" stroke="#ffffff" stroke-width="8"></circle>
+
+                <!-- Ícone de Check / Certo do Selo -->
+                <path id="badgeCheck" d="M -16 2 L -5 14 L 18 -12" stroke="#ffb940" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+
+              <!-- 5. ÍCONE DE CADEADO DE SEGURANÇA (Canto Inferior Esquerdo) -->
+              <g id="padlock" transform="translate(250, 500)">
+                <!-- Arco do Cadeado -->
+                <path id="lockShackle" d="M 12 10 V -12 C 12 -28 36 -28 36 -12 V 10" fill="none" stroke="#ffb940" stroke-width="10" stroke-linecap="round"></path>
+                <!-- Corpo do Cadeado -->
+                <rect id="lockBody" x="0" y="8" width="48" height="42" rx="10" fill="#ffb940" stroke="#ffb940" stroke-width="8"></rect>
+                <!-- Ocultar Fecho Central -->
+                <circle cx="24" cy="25" r="4" fill="#0f172a"></circle>
+                <path d="M 24 29 V 37" stroke="#0f172a" stroke-width="4" stroke-linecap="round"></path>
+              </g>
+
+            </g>
+          </svg>
